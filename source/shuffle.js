@@ -1,7 +1,7 @@
 
-import * as p__common from './common'
+const m__common = require('./common')
 
 
-export const ten = p__common.algorithm('0123456789')
-export const hex = p__common.algorithm('0123456789abcdef')
-export const six = p__common.algorithm('abcdef')
+exports.ten = m__common.algorithm('0123456789')
+exports.hex = m__common.algorithm('0123456789abcdef')
+exports.six = m__common.algorithm('abcdef')
