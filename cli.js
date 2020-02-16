@@ -9,4 +9,4 @@ array.slice(2).forEach((value) => {
 	instance.update(value)
 	const digest = instance.digest()
 	console.log(digest)
-});
+})
