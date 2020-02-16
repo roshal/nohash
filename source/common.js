@@ -1,5 +1,5 @@
 
-const table = new Map()
+const table = {}
 
 
 export const algorithm = (string) => {
@@ -30,8 +30,8 @@ export const alternate = (step, one, two) => {
 }
 
 export const brace = (limit) => {
-	if (table.has(limit)) {
-		return table.get(limit)
+	if (limit in table) {
+		return table[limit]
 	}
 	const array = []
 	let one = limit
@@ -41,7 +41,7 @@ export const brace = (limit) => {
 			array.push([one, --two])
 		}
 	}
-	table.set(limit, array)
+	table[limit] = array
 	return array
 }
 

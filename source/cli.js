@@ -1,7 +1,5 @@
 
-require = require('esm')(module)
-
-const m__sequence = require('./source/sequence')
+import * as m__sequence from './sequence'
 
 
 const array = process.argv

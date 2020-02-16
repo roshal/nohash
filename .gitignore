@@ -1,13 +1,15 @@
 
 /*
 
-!/docs
-!/source
+!/docs/
+!/source/
 
+!/.editorconfig
 !/.gitignore
+!/.npmignore
 
-!/package-lock.json
 !/package.json
 
 !/cli.js
 !/index.js
+!/rollup.config.js
