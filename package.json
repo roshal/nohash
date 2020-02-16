@@ -1,7 +1,7 @@
 {
   "name": "nohash",
   "main": "index.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/roshal/nohash",
   "bin": {
     "nohash": "bin/cli.js"

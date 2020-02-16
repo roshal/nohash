@@ -1,5 +1,5 @@
 
-const m__sequence_hex = require('../source/sequence-hex')
+const m__sequence_hex = require('nohash/source/sequence-hex')
 
 
 const array = process.argv
