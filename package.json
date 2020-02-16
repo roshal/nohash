@@ -1,9 +1,13 @@
 {
   "name": "nohash",
   "main": "index.js",
-  "version": "1.0.1",
-  "author": "roshal",
+  "version": "1.0.5",
   "homepage": "https://github.com/roshal/nohash",
-  "repository": "https://github.com/roshal/nohash",
+  "bin": {
+    "nohash": "cli.js"
+  },
+  "dependencies": {
+    "yargs": "^15.1.0"
+  },
   "license": "MIT"
 }

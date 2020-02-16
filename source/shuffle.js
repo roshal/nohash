@@ -1,5 +1,5 @@
 
-import p__common from './common'
+import * as p__common from './common'
 
 
 export const ten = p__common.algorithm('0123456789')
