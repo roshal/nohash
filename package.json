@@ -1,0 +1,9 @@
+{
+  "name": "nohash",
+  "main": "index.js",
+  "version": "1.0.1",
+  "author": "roshal",
+  "homepage": "https://github.com/roshal/nohash",
+  "repository": "https://github.com/roshal/nohash",
+  "license": "MIT"
+}
