@@ -1,10 +1,10 @@
 {
   "name": "nohash",
   "main": "index.js",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "homepage": "https://github.com/roshal/nohash",
   "bin": {
-    "nohash": "cli.js"
+    "nohash": "bin/cli.js"
   },
   "license": "MIT"
 }
