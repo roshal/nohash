@@ -1,5 +1,5 @@
 
-import m__common from './common'
+import * as m__common from './common'
 
 
 const string_six = 'fedcba'
