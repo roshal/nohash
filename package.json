@@ -1,10 +1,10 @@
 {
   "name": "nohash",
   "main": "index.js",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "homepage": "https://github.com/roshal/nohash",
   "bin": {
-    "nohash": "public/cli.js"
+    "nohash": "cli.js"
   },
   "dependencies": {
     "esm": "^3.2.25"
