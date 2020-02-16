@@ -2,23 +2,23 @@
 const table = new Map()
 
 
-export const algorithm = (string) => {
+exports.algorithm = (string) => {
 	return function () {
 		const array = string.split('')
-		const pairs = brace(array.length)
+		const pairs = exports.brace(array.length)
 		const limit = pairs.length
 		this.digest = (digest) => {
 			return array.join('')
 		}
 		this.update = (string) => {
-			decompose(limit, string).forEach((value) => {
-				swap(array, ...pairs[value])
+			exports.decompose(limit, string).forEach((value) => {
+				exports.swap(array, ...pairs[value])
 			})
 		}
 	}
 }
 
-export const alternate = (step, one, two) => {
+exports.alternate = (step, one, two) => {
 	const array = []
 	const limit = one.length + two.length
 	const array_one = [...one]
@@ -29,7 +29,7 @@ export const alternate = (step, one, two) => {
 	return array
 }
 
-export const brace = (limit) => {
+exports.brace = (limit) => {
 	if (table.has(limit)) {
 		return table.get(limit)
 	}
@@ -45,8 +45,8 @@ export const brace = (limit) => {
 	return array
 }
 
-export const decompose = (limit, string) => {
-	const queue = recompose(limit, string)
+exports.decompose = (limit, string) => {
+	const queue = exports.recompose(limit, string)
 	const array = []
 	let value = 0
 	queue.forEach((byte) => {
@@ -62,7 +62,7 @@ export const decompose = (limit, string) => {
 	return array
 }
 
-export const recompose = (limit, string) => {
+exports.recompose = (limit, string) => {
 	const buffer = Buffer.from(string)
 	limit = limit >> 8
 	if (limit) {
@@ -79,7 +79,7 @@ export const recompose = (limit, string) => {
 	return buffer
 }
 
-export const swap = (array, one, two) => {
+exports.swap = (array, one, two) => {
 	const zone = array[one]
 	array[one] = array[two]
 	array[two] = zone

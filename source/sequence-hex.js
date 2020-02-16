@@ -1,5 +1,5 @@
 
-import * as m__common from './common'
+const m__common = require('./common')
 
 
 const string_six = 'abcdef'
@@ -14,7 +14,7 @@ const limit_ten = pairs_ten.length
 const limit = limit_six + limit_ten
 
 
-export default function () {
+module.exports = function () {
 	const array_six = string_six.split('')
 	const array_ten = string_ten.split('')
 	this.digest = (digest) => {

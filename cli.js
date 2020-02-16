@@ -1,10 +1,10 @@
 
-import * as m__sequence_hex from './source/sequence-hex'
+const m__sequence_hex = require('./source/sequence-hex')
 
 
 const array = process.argv
 
-array.map((value) => {
+array.slice(2).forEach((value) => {
 	const instance = new m__sequence_hex()
 	instance.update(value)
 	const digest = instance.digest()
