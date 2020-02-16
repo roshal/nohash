@@ -6,8 +6,5 @@
   "bin": {
     "nohash": "cli.js"
   },
-  "dependencies": {
-    "yargs": "^15.1.0"
-  },
   "license": "MIT"
 }
