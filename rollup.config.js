@@ -6,6 +6,7 @@ export default (object) => {
 		],
 		output: {
 			dir: 'public',
+			format: 'cjs',
 		},
 	}
 }
