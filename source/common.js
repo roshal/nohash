@@ -1,18 +1,19 @@
 
 const table = {}
 
-
 export const algorithm = (string) => {
 	return function () {
 		const array = string.split('')
-		const pairs = brace(array.length)
+		const derangements = derange(array.length)
 		const limit = pairs.length
 		this.digest = (digest) => {
 			return array.join('')
 		}
 		this.update = (string) => {
 			decompose(limit, string).forEach((value) => {
-				swap(array, ...pairs[value])
+				derangements[value].forEach(([one, two]) => {
+					swap(array, one, two)
+				})
 			})
 		}
 	}
@@ -26,22 +27,6 @@ export const alternate = (step, one, two) => {
 	while (array.length < limit) {
 		array.push(array.length % step ? array_one.shift() : array_two.shift())
 	}
-	return array
-}
-
-export const brace = (limit) => {
-	if (limit in table) {
-		return table[limit]
-	}
-	const array = []
-	let one = limit
-	while (one) {
-		let two = --one
-		while (two) {
-			array.push([one, --two])
-		}
-	}
-	table[limit] = array
 	return array
 }
 
@@ -61,6 +46,23 @@ export const decompose = (limit, string) => {
 	}
 	return array
 }
+
+export const derange = (limit) => {
+	if (limit in table) {
+		return table[limit]
+	}
+	const array = []
+	let one = limit
+	while (one) {
+		let two = --one
+		while (two) {
+			array.push([one, --two])
+		}
+	}
+	table[limit] = array
+	return array
+}
+
 
 export const recompose = (limit, string) => {
 	const buffer = Buffer.from(string)

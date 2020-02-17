@@ -1,18 +1,16 @@
 
 import * as m__common from './common'
 
-
 const string_six = 'fedcba'
 const string_ten = '9876543210'
 
-const pairs_six = m__common.brace(string_six.length)
-const pairs_ten = m__common.brace(string_ten.length)
+const pairs_six = m__common.build(string_six.length)
+const pairs_ten = m__common.build(string_ten.length)
 
 const limit_six = pairs_six.length
 const limit_ten = pairs_ten.length
 
 const limit = limit_ten + limit_six
-
 
 export default function () {
 	const array_six = string_six.split('')
