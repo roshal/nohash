@@ -1,6 +1,8 @@
 
 /*
 
+!/.github/
+
 !/docs/
 !/source/
 
@@ -8,6 +10,7 @@
 !/.gitignore
 !/.npmignore
 
+!/package-lock.json
 !/package.json
 
 !/cli.js
